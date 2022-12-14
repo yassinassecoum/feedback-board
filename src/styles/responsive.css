@@ -1,0 +1,82 @@
+@media screen and (max-width: 1024px) {
+  .mainWrap {
+    grid-template-rows: 210px 1fr;
+    grid-template-areas: none;
+    grid-template-columns: none;
+    gap: 5px;
+  }
+  .sideContent {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .wrapUser {
+    display: none !important;
+  }
+  header {
+    height: 100% !important;
+  }
+  .wrap-header,
+  .wrapFilter,
+  .wrapRoadmap {
+    width: 33%;
+  }
+  .bg-header {
+    height: 100%;
+    width: 100%;
+  }
+  .main {
+    padding: 50px 25px !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    padding: 15px !important;
+  }
+  .mainWrap {
+    gap: 0px;
+    grid-template-rows: 190px 1fr;
+  }
+  .wrapRoadmap {
+    display: none;
+  }
+  .sideContent {
+    justify-content: space-between;
+  }
+  .wrap-header,
+  .wrapFilter {
+    width: 45%;
+  }
+  .contentWrap {
+    min-width: unset !important;
+  }
+  .suggestions {
+    display: none;
+  }
+}
+@media screen and (max-width: 555px) {
+  .mainWrap {
+    gap: 60px;
+    grid-template-rows: 215px 1fr;
+  }
+  .wrap-header,
+  .wrapFilter {
+    width: 49%;
+  }
+  .sortImg {
+    display: none;
+  }
+  .addFeedback {
+    height: 100% !important;
+  }
+  .post {
+    padding: 16px 20px !important;
+  }
+}
+@media screen and (max-width: 670px) {
+  .wrapBox {
+    padding: 10px;
+  }
+  .boxForm {
+    padding: 20px;
+  }
+}

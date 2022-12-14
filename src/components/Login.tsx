@@ -5,6 +5,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useUserAuth } from "../context/UserAuthContext";
 
+import googleIcon from "../assets/google.png";
+
 export const Login = () => {
   const navigate = useNavigate();
   const { googleSignIn, signIn } = useUserAuth();
@@ -23,16 +25,16 @@ export const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+    formState: { errors } } = useForm({
+      resolver: yupResolver(schema),
+    });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     signInWithEmail(data.email, data.password);
   };
 
-  const signInWithGoogle = async () => {
+  const signInWithGoogle = async (e: any) => {
+    e.preventDefault();
     try {
       await googleSignIn();
       navigate("/main");
@@ -41,7 +43,7 @@ export const Login = () => {
     }
   };
 
-  const signInWithEmail = async (email, password) => {
+  const signInWithEmail = async (email: String, password: String) => {
     try {
       await signIn(email, password);
       navigate("/main");
@@ -51,20 +53,20 @@ export const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" placeholder="email" {...register("email")} />
-        <span>{errors.email?.message}</span>
-        <input
-          type="password"
-          placeholder="password"
-          {...register("password")}
-        />
-        <span>{errors.password?.message}</span>
-        <button type="submit">Submit</button>
-      </form>
-      <button onClick={signInWithGoogle}>Sign in w/ Google</button>
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <p className="formLabel">Email :</p>
+      <input type="text" placeholder="email@mail.com" {...register("email")} />
+      <span className="error">{errors.email?.message as String}</span>
+      <p className="formLabel">Password :</p>
+      <input type="password" placeholder="Password" {...register("password")} />
+      <span className="error">{errors.password?.message as String}</span>
+      <button className="loginBtn" type="submit">
+        Sign in
+      </button>
+      <button className="googleBtn" onClick={(e) => signInWithGoogle(e)}>
+        Sign in with
+        <img className="googleIcon" src={googleIcon} alt="google icon" />
+      </button>
+    </form>
   );
 };

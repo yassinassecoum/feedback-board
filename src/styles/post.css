@@ -1,0 +1,240 @@
+.post {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 20px;
+}
+.contentWrap {
+  cursor: pointer;
+  min-width: 500px;
+}
+.post:hover {
+  transform: translateX(0px) translateY(-0.1rem);
+}
+.left {
+  display: flex;
+  gap: 24px;
+}
+.likeWrap {
+  width: 40px;
+  height: 53px;
+  transition: all 0.3s ease 0s;
+
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: -0.180556px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+}
+.likeWrap:hover {
+  background: rgb(207, 215, 255);
+  transform: translateX(0rem) translateY(-0.125rem);
+}
+.blue {
+  background: rgb(70, 97, 230);
+  color: rgb(255, 255, 255);
+}
+.grey {
+  background: #f2f4fe;
+  color: #3a4374;
+}
+.upvote {
+  font-size: 16px;
+  margin-bottom: 2px;
+  filter: invert(100%) sepia(100%) saturate(25%) hue-rotate(101deg)
+    brightness(107%) contrast(106%);
+}
+
+.userWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+.avatarPost {
+  width: 40px;
+  border-radius: 100%;
+}
+.date {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  color: rgb(100, 113, 150);
+}
+.postTitle {
+  color: rgb(58, 67, 116);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+}
+.postDesc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: rgb(100, 113, 150);
+  padding-bottom: 16px;
+  margin: 0px;
+}
+.category {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgb(242, 244, 255);
+  border-radius: 10px;
+  color: rgb(70, 97, 230);
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* SortPost */
+
+.wrapSort {
+  background: rgb(55, 63, 104);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sortContent {
+  display: flex;
+  color: rgb(255, 255, 255);
+  gap: 16px;
+}
+.addFeedback {
+  display: inline;
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(242, 244, 254);
+  cursor: pointer;
+  border: none;
+  background: rgb(173, 31, 234);
+}
+.addFeedback:hover {
+  background: rgb(199, 90, 246);
+  transform: translateX(0rem) translateY(-0.125rem);
+}
+.sortImg {
+  font-size: 24px;
+}
+.suggestions {
+  padding-right: 16px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.sortBy {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.select {
+  border: none;
+  color: white;
+  background: rgb(55, 63, 104);
+  cursor: pointer;
+  text-indent: 5px;
+}
+/* PostDetail */
+
+.dialogDetails {
+  background-color: #f2f2f2 !important;
+}
+.wrapForm {
+  margin: 50px auto;
+  max-width: 730px;
+  width: 100%;
+}
+.wrapComments {
+  background-color: white;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 24px 34px;
+  border-radius: 10px;
+}
+.commentTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.comment {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 32px;
+}
+.commentContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.usernameAvatar {
+  margin-right: 25px;
+}
+.commentUsername {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.194444px;
+  color: #3a4374;
+}
+.commentMsg {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #647196;
+}
+hr {
+  background: #8c92b3;
+  width: 100%;
+  height: 1px;
+  opacity: 0.25;
+}
+.addCommentBox {
+  background-color: white;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 24px 34px;
+  border-radius: 10px;
+}
+.textareaComment {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+}
+.addComment {
+  display: flex !important;
+  margin-left: auto;
+}
+
+.goBack {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #647196;
+  margin-bottom: 10px;
+}
